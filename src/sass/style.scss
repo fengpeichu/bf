@@ -1,0 +1,26 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include box_flex;
+    @include direction(column);
+    .contain {
+        width: 100%;
+        @include box_flex;
+        flex-wrap: wrap; //适当情况下换行 
+        dl {
+            width: 20%;
+            // @include box_flex;
+            // @include direction(column);
+            // @include flex_shrink(0); //控制比例  令其自身不发生改变
+            // flex-wrap: wrap;
+            dd {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
